@@ -12,6 +12,8 @@ namespace MultipleScreensReal
 {
     public partial class Form1 : Form
     {
+        public static int numberPlays = 0;
+
         public Form1()
         {
             InitializeComponent();

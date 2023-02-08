@@ -15,6 +15,8 @@ namespace MultipleScreensReal
         public GameScreen()
         {
             InitializeComponent();
+
+            playsLabel.Text = $"Times played: {Form1.numberPlays}";
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -33,11 +35,22 @@ namespace MultipleScreensReal
 
             ms.Focus();
 
-            // Centre the screen on the Form  
-            ms.Location = new Point((this.ClientSize.Width - ms.Width) / 2,
-                (this.ClientSize.Height - ms.Height) / 2);
+            // Centre the screen on the form
+            ms.Location = new Point((f.Width - ms.Width) / 2, (f.Height - ms.Height) / 2);
 
             /// add focus/enter event after
+        }
+
+        private void returnButton_Enter(object sender, EventArgs e)
+        {
+            returnButton.BackColor = SystemColors.ActiveBorder;
+            exitButton.BackColor = SystemColors.InactiveBorder;
+        }
+
+        private void exitButton_Enter(object sender, EventArgs e)
+        {
+            exitButton.BackColor = SystemColors.ActiveBorder;
+            returnButton.BackColor = SystemColors.InactiveBorder;
         }
     }
 }

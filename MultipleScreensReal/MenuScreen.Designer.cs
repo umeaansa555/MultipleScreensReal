@@ -33,7 +33,7 @@
             // 
             // openButton
             // 
-            this.openButton.Location = new System.Drawing.Point(24, 41);
+            this.openButton.Location = new System.Drawing.Point(53, 85);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(102, 76);
             this.openButton.TabIndex = 0;
@@ -48,6 +48,8 @@
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.Controls.Add(this.openButton);
             this.Name = "MenuScreen";
+            this.Size = new System.Drawing.Size(212, 258);
+            this.Enter += new System.EventHandler(this.MenuScreen_Enter);
             this.ResumeLayout(false);
 
         }
